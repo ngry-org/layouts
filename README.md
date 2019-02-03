@@ -1,21 +1,19 @@
 # Angular layouts
 
-Project provides Angular layout components
+Project provides Angular layout components such as stack, layers, viewport, media, stage and panel.
 
-## What's in the box
-
-### Layers layout
+## Layers layout
 
 Represents ordered set of overlays.
 
-Consist of following components:
+Consists of the following components:
 
 - `<l-layers>` component represents container for one or more `<l-layer>` components
 - `<l-layer>` components fill the parent and behaves as ordered overlays
 
-##### Usage example:
+### Usage
 
-###### Import layers layout module
+Import `LayersLayoutModule` into your app
 
 ```typescript
 import {NgModule} from '@angular/core';
@@ -30,9 +28,9 @@ export class AppModule {
 }
 ```
 
-###### Use layers layout in template
+Use layers layout components in your templates
 
-```angular2html
+```html
 <l-layers>
   <l-layer>
     Background layer
@@ -46,14 +44,14 @@ export class AppModule {
 </l-layers>
 ```
 
-##### Layers layout demo
+### Example
 
 - Visit [layers layout demo page](https://ngry-org.github.io/pkg/layouts#/layouts/layers) 
 
 
 
 
-### Media layout
+## Media layout
 
 Represents row which usually contains some multimedia content, it's details and action triggers.
 
@@ -64,9 +62,9 @@ Consist of following components:
 - `<l-media-action>` represents container for action trigger element, takes minimum required space
 - `<l-media-details>` represents container for content description and related details
 
-##### Usage example:
+### Usage
 
-Import `MediaLayoutModule` in your app
+Import `MediaLayoutModule` into your app
 
 ```typescript
 import {NgModule} from '@angular/core';
@@ -83,7 +81,7 @@ export class AppModule {
 
 Use media layout components in your templates
 
-```angular2html
+```html
 <l-media>
   <l-media-content>
     <img src="poster.jpg" alt="Poster">
@@ -101,6 +99,6 @@ Use media layout components in your templates
 </l-media>
 ```
 
-##### Media layout demo
+### Example
 
 - Visit [media layout demo page](https://ngry-org.github.io/pkg/layouts#/layouts/media) 
