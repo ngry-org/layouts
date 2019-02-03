@@ -46,7 +46,7 @@ Use layers layout components in your templates
 
 ### Example
 
-- Visit [layers layout demo page](https://ngry-org.github.io/pkg/layouts#/layouts/layers) 
+Visit [layers layout demo page](https://ngry-org.github.io/pkg/layouts#/layouts/layers) 
 
 
 
@@ -101,4 +101,4 @@ Use media layout components in your templates
 
 ### Example
 
-- Visit [media layout demo page](https://ngry-org.github.io/pkg/layouts#/layouts/media) 
+Visit [media layout demo page](https://ngry-org.github.io/pkg/layouts#/layouts/media) 
