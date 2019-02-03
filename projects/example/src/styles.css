@@ -98,6 +98,10 @@ h2 {
   font-weight: 900;
 }
 
+ul {
+  list-style: none;
+}
+
 .clickable {
   cursor: default;
 }

@@ -24,6 +24,8 @@ import {LayersMockComponent} from './mocks/layers-mock/layers-mock.component';
 import {AboutZoneComponent} from './zones/about-zone/about-zone.component';
 import {ServicesModule} from './services/services.module';
 import {RouteTitleService} from './services/route-title/route-title.service';
+import {TilesMockComponent} from './mocks/tiles-mock/tiles-mock.component';
+import {TilesLayoutModule} from '../../../layouts/src/lib/tiles/tiles-layout.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import {RouteTitleService} from './services/route-title/route-title.service';
     StageMockComponent,
     StackMockComponent,
     LayersMockComponent,
-    AboutZoneComponent
+    AboutZoneComponent,
+    TilesMockComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import {RouteTitleService} from './services/route-title/route-title.service';
     PanelLayoutModule,
     StackLayoutModule,
     StageLayoutModule,
+    TilesLayoutModule,
     ViewportLayoutModule,
     ServicesModule,
     RouterModule.forRoot([
@@ -97,6 +101,13 @@ import {RouteTitleService} from './services/route-title/route-title.service';
             component: StageMockComponent,
             data: {
               title: 'Stage layout'
+            }
+          },
+          {
+            path: 'tiles',
+            component: TilesMockComponent,
+            data: {
+              title: 'Tiles layout'
             }
           },
           {
