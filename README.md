@@ -1,27 +1,100 @@
-# Layouts
+# Angular layouts
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.1.
+Project provides Angular layout components
 
-## Development server
+## What's in the box
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Layers layout
 
-## Code scaffolding
+Represents ordered set of overlays.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Consist of following components:
 
-## Build
+- `<l-layers>` component represents container for one or more `<l-layer>` components. 
+- `<l-layer>` components fill the parent and behaves as ordered overlays.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+##### Usage example:
 
-## Running unit tests
+###### Import layers layout module
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
+import {NgModule} from '@angular/core';
+import {LayersLayoutModule} from '@ngry/layouts';
 
-## Running end-to-end tests
+@NgModule({
+  imports: [
+    LayersLayoutModule
+  ]
+})
+export class AppModule { 
+}
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+###### Use layers layout in template
 
-## Further help
+```angular2html
+<l-layers>
+  <l-layer>
+    Background layer
+  </l-layer>
+  <l-layer>
+    Middle layer
+  </l-layer>
+  <l-layer>
+    Front layer
+  </l-layer>
+</l-layers>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+##### Layers layout demo
+
+- Run `demo` application
+- Open [`/layouts/layers`](http://localhost:4300/layouts/layers) page
+
+
+### Media layout
+
+Represents row which usually contains multimedia content, details and actions.
+
+Consist of following components:
+
+- `<l-media>` component represents container for one or more `<l-media-content>`, `<l-media-details>` and `<l-media-action>` components. 
+- `<l-layer>` components fill the parent and behaves as ordered overlays.
+
+##### Usage example:
+
+###### Import layers layout module
+
+```typescript
+import {NgModule} from '@angular/core';
+import {LayersLayoutModule} from '@ngry/layouts';
+
+@NgModule({
+  imports: [
+    LayersLayoutModule
+  ]
+})
+export class AppModule { 
+}
+```
+
+###### Use layers layout in template
+
+```angular2html
+<l-layers>
+  <l-layer>
+    Background layer
+  </l-layer>
+  <l-layer>
+    Middle layer
+  </l-layer>
+  <l-layer>
+    Front layer
+  </l-layer>
+</l-layers>
+```
+
+##### Layers layout demo
+
+- Run `demo` application
+- Open [`/layouts/layers`](http://localhost:4300/layouts/layers) page

@@ -9,7 +9,7 @@ import {
   StackLayoutModule,
   StageLayoutModule,
   ViewportLayoutModule
-} from 'layouts';
+} from '@ngry/layouts';
 
 import {AppComponent} from './app.component';
 import {BlockComponent} from './components/block/block.component';
@@ -20,7 +20,10 @@ import {PanelMockComponent} from './mocks/panel-mock/panel-mock.component';
 import {ViewportMockComponent} from './mocks/viewport-mock/viewport-mock.component';
 import {StageMockComponent} from './mocks/stage-mock/stage-mock.component';
 import {StackMockComponent} from './mocks/stack-mock/stack-mock.component';
-import { LayersMockComponent } from './mocks/layers-mock/layers-mock.component';
+import {LayersMockComponent} from './mocks/layers-mock/layers-mock.component';
+import {AboutZoneComponent} from './zones/about-zone/about-zone.component';
+import {ServicesModule} from './services/services.module';
+import {RouteTitleService} from './services/route-title/route-title.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import { LayersMockComponent } from './mocks/layers-mock/layers-mock.component';
     ViewportMockComponent,
     StageMockComponent,
     StackMockComponent,
-    LayersMockComponent
+    LayersMockComponent,
+    AboutZoneComponent
   ],
   imports: [
     BrowserModule,
@@ -44,40 +48,78 @@ import { LayersMockComponent } from './mocks/layers-mock/layers-mock.component';
     StackLayoutModule,
     StageLayoutModule,
     ViewportLayoutModule,
+    ServicesModule,
     RouterModule.forRoot([
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'layouts'
+      },
       {
         path: 'layouts',
         component: LayoutsZoneComponent,
         children: [
           {
+            path: '',
+            pathMatch: 'full',
+            redirectTo: 'layers'
+          },
+          {
             path: 'layers',
-            component: LayersMockComponent
+            component: LayersMockComponent,
+            data: {
+              title: 'Layers layout'
+            }
           },
           {
             path: 'media',
-            component: MediaMockComponent
+            component: MediaMockComponent,
+            data: {
+              title: 'Media layout'
+            }
           },
           {
             path: 'panel',
-            component: PanelMockComponent
+            component: PanelMockComponent,
+            data: {
+              title: 'Panel layout'
+            }
           },
           {
             path: 'stack',
-            component: StackMockComponent
+            component: StackMockComponent,
+            data: {
+              title: 'Stack layout'
+            }
           },
           {
             path: 'stage',
-            component: StageMockComponent
+            component: StageMockComponent,
+            data: {
+              title: 'Stage layout'
+            }
           },
           {
             path: 'viewport',
-            component: ViewportMockComponent
+            component: ViewportMockComponent,
+            data: {
+              title: 'Viewport layout'
+            }
           }
         ]
+      },
+      {
+        path: 'about',
+        component: AboutZoneComponent,
+        data: {
+          title: 'About'
+        }
       }
-    ])
+    ], {
+      useHash: true
+    })
   ],
-  providers: [],
+  providers: [RouteTitleService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -6,5 +6,9 @@ import {Component} from '@angular/core';
   styleUrls: ['./stack-mock.component.css']
 })
 export class StackMockComponent {
+  direction = 'column';
 
+  public setDirection(direction: string) {
+    this.direction = direction;
+  }
 }

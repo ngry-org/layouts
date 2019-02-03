@@ -43,9 +43,9 @@
         }
       }
     },
-    "mocks": {
-      "root": "projects/mocks/",
-      "sourceRoot": "projects/mocks/src",
+    "demo": {
+      "root": "projects/demo/",
+      "sourceRoot": "projects/demo/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {
@@ -54,17 +54,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mocks",
-            "index": "projects/mocks/src/index.html",
-            "main": "projects/mocks/src/main.ts",
-            "polyfills": "projects/mocks/src/polyfills.ts",
-            "tsConfig": "projects/mocks/tsconfig.app.json",
+            "outputPath": "dist/demo",
+            "index": "projects/demo/src/index.html",
+            "main": "projects/demo/src/main.ts",
+            "polyfills": "projects/demo/src/polyfills.ts",
+            "tsConfig": "projects/demo/tsconfig.app.json",
             "assets": [
-              "projects/mocks/src/favicon.ico",
-              "projects/mocks/src/assets"
+              "projects/demo/src/favicon.ico",
+              "projects/demo/src/assets"
             ],
             "styles": [
-              "projects/mocks/src/styles.css"
+              "projects/demo/src/styles.css"
             ],
             "scripts": []
           },
@@ -72,8 +72,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/mocks/src/environments/environment.ts",
-                  "with": "projects/mocks/src/environments/environment.prod.ts"
+                  "replace": "projects/demo/src/environments/environment.ts",
+                  "with": "projects/demo/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -98,34 +98,35 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mocks:build"
+            "port": 4300,
+            "browserTarget": "demo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mocks:build:production"
+              "browserTarget": "demo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mocks:build"
+            "browserTarget": "demo:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/mocks/src/test.ts",
-            "polyfills": "projects/mocks/src/polyfills.ts",
-            "tsConfig": "projects/mocks/tsconfig.spec.json",
-            "karmaConfig": "projects/mocks/karma.conf.js",
+            "main": "projects/demo/src/test.ts",
+            "polyfills": "projects/demo/src/polyfills.ts",
+            "tsConfig": "projects/demo/tsconfig.spec.json",
+            "karmaConfig": "projects/demo/karma.conf.js",
             "styles": [
-              "projects/mocks/src/styles.css"
+              "projects/demo/src/styles.css"
             ],
             "scripts": [],
             "assets": [
-              "projects/mocks/src/favicon.ico",
-              "projects/mocks/src/assets"
+              "projects/demo/src/favicon.ico",
+              "projects/demo/src/assets"
             ]
           }
         },
@@ -133,8 +134,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/mocks/tsconfig.app.json",
-              "projects/mocks/tsconfig.spec.json"
+              "projects/demo/tsconfig.app.json",
+              "projects/demo/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

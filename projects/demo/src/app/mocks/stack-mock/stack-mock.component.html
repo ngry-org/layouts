@@ -1,0 +1,75 @@
+<l-stack>
+  <l-stack-block>
+    <h1>
+      <app-block>
+        <app-block>
+          Stack layout
+        </app-block>
+      </app-block>
+    </h1>
+    <hr>
+  </l-stack-block>
+  <l-stack-block>
+    <form>
+      <app-block>
+        <l-stack direction="row">
+          <l-stack-block>
+            <app-block>
+              Direction:
+            </app-block>
+          </l-stack-block>
+          <l-stack-block>
+            <app-block>
+              <label>
+                <input type="radio" name="direction" value="column" [checked]="direction === 'column'" (change)="setDirection('column')">
+                column
+              </label>
+            </app-block>
+          </l-stack-block>
+          <l-stack-block>
+            <app-block>
+              <label>
+                <input type="radio" name="direction" value="row" [checked]="direction === 'row'" (change)="setDirection('row')">
+                row
+              </label>
+            </app-block>
+          </l-stack-block>
+        </l-stack>
+      </app-block>
+    </form>
+    <hr>
+  </l-stack-block>
+
+  <l-stack-body>
+    <l-stack [direction]="direction">
+      <l-stack-block style="background: #ddd;">
+        <app-block>
+          <app-block>
+            Block #1
+          </app-block>
+        </app-block>
+      </l-stack-block>
+      <l-stack-body style="background: #eee;">
+        <app-block>
+          <app-block>
+            Body #1
+          </app-block>
+        </app-block>
+      </l-stack-body>
+      <l-stack-block style="background: #ddd;">
+        <app-block>
+          <app-block>
+            Block #2
+          </app-block>
+        </app-block>
+      </l-stack-block>
+      <l-stack-body style="background: #eee;">
+        <app-block>
+          <app-block>
+            Body #2
+          </app-block>
+        </app-block>
+      </l-stack-body>
+    </l-stack>
+  </l-stack-body>
+</l-stack>

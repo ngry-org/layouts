@@ -19,10 +19,10 @@
       "dom"
     ],
     "paths": {
-      "layouts": [
+      "@ngry/layouts": [
         "dist/layouts"
       ],
-      "layouts/*": [
+      "@ngry/layouts/*": [
         "dist/layouts/*"
       ]
     }
