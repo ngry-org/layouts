@@ -7,6 +7,7 @@ import {Component, HostBinding, Input} from '@angular/core';
 })
 export class StackComponent {
   @Input()
+  @HostBinding('attr.direction')
   direction: 'column' | 'row' = 'column';
 
   @HostBinding('class.row')

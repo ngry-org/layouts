@@ -4,26 +4,26 @@
   flex-direction: column;
 }
 
-:host.x-left {
+:host[x=left] {
   align-items: flex-start;
 }
 
-:host.x-center {
+:host[x=center] {
   align-items: center;
 }
 
-:host.x-right {
+:host[x=right] {
   align-items: flex-end;
 }
 
-:host.y-top {
+:host[y=top] {
   justify-content: flex-start;
 }
 
-:host.y-center {
+:host[y=center] {
   justify-content: center;
 }
 
-:host.y-bottom {
+:host[y=bottom] {
   justify-content: flex-end;
 }
