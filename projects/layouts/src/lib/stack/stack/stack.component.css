@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  flex-grow: 1;
+}
+
+:host.row {
+  flex-direction: row;
+}
+
+:host.column {
+  flex-direction: column;
+}

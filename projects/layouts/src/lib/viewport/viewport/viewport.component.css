@@ -1,0 +1,21 @@
+:host {
+  position: relative;
+  display: block;
+  flex-grow: 1;
+}
+
+.l-viewport__view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+.l-viewport__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 100%;
+}

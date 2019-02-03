@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+  flex-grow: 1;
+  min-height: 100%;
+}
+
+strong {
+  font-size: 120px;
+  font-weight: 900;
+}

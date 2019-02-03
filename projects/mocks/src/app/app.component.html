@@ -1,0 +1,60 @@
+<l-stack>
+  <l-stack-block>
+    <header>
+      <l-stack direction="row">
+        <l-stack-block>
+          <a class="clickable" routerLink="/">
+            <app-block>
+              <l-stack direction="row">
+                <l-stack-block>
+                  <app-block>
+                    <img src="favicon.ico" alt="icon" width="16" height="16"/>
+                  </app-block>
+                </l-stack-block>
+                <l-stack-block>
+                  <l-panel>
+                    <app-block>
+                      <strong>Layouts</strong>
+                    </app-block>
+                  </l-panel>
+                </l-stack-block>
+              </l-stack>
+            </app-block>
+          </a>
+        </l-stack-block>
+        <l-stack-body>
+          <!-- empty -->
+        </l-stack-body>
+        <l-stack-block>
+          <l-panel>
+            <nav>
+              <l-stack direction="row">
+                <l-stack-block>
+                  <a class="clickable" routerLink="layouts" routerLinkActive="active">
+                    <app-block>
+                      <app-block>
+                        Layouts
+                      </app-block>
+                    </app-block>
+                  </a>
+                </l-stack-block>
+                <l-stack-block>
+                  <a class="clickable" routerLink="about" routerLinkActive="active">
+                    <app-block>
+                      <app-block>
+                        About
+                      </app-block>
+                    </app-block>
+                  </a>
+                </l-stack-block>
+              </l-stack>
+            </nav>
+          </l-panel>
+        </l-stack-block>
+      </l-stack>
+    </header>
+  </l-stack-block>
+  <l-stack-body>
+    <router-outlet></router-outlet>
+  </l-stack-body>
+</l-stack>

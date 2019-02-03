@@ -1,0 +1,141 @@
+<l-stack direction="row">
+  <l-stack-block>
+    <aside>
+      <l-viewport>
+        <nav>
+          <a routerLink="layers" routerLinkActive="active" class="clickable">
+            <app-block>
+              <l-media>
+                <l-media-action>
+                  <app-block>
+                    <i class="fa fa-puzzle-piece"></i>
+                  </app-block>
+                </l-media-action>
+                <l-media-details>
+                  <app-block>
+                    Layers
+                  </app-block>
+                </l-media-details>
+                <l-media-action>
+                  <app-block>
+                    <i class="fa fa-angle-right"></i>
+                  </app-block>
+                </l-media-action>
+              </l-media>
+            </app-block>
+          </a>
+          <a routerLink="media" routerLinkActive="active" class="clickable">
+            <app-block>
+              <l-media>
+                <l-media-action>
+                  <app-block>
+                    <i class="fa fa-puzzle-piece"></i>
+                  </app-block>
+                </l-media-action>
+                <l-media-details>
+                  <app-block>
+                    Media
+                  </app-block>
+                </l-media-details>
+                <l-media-action>
+                  <app-block>
+                    <i class="fa fa-angle-right"></i>
+                  </app-block>
+                </l-media-action>
+              </l-media>
+            </app-block>
+          </a>
+          <a routerLink="panel" routerLinkActive="active" class="clickable">
+            <app-block>
+              <l-media>
+                <l-media-action>
+                  <app-block>
+                    <i class="fa fa-puzzle-piece"></i>
+                  </app-block>
+                </l-media-action>
+                <l-media-details>
+                  <app-block>
+                    Panel
+                  </app-block>
+                </l-media-details>
+                <l-media-action>
+                  <app-block>
+                    <i class="fa fa-angle-right"></i>
+                  </app-block>
+                </l-media-action>
+              </l-media>
+            </app-block>
+          </a>
+          <a routerLink="stack" routerLinkActive="active" class="clickable">
+            <app-block>
+              <l-media>
+                <l-media-action>
+                  <app-block>
+                    <i class="fa fa-puzzle-piece"></i>
+                  </app-block>
+                </l-media-action>
+                <l-media-details>
+                  <app-block>
+                    Stack
+                  </app-block>
+                </l-media-details>
+                <l-media-action>
+                  <app-block>
+                    <i class="fa fa-angle-right"></i>
+                  </app-block>
+                </l-media-action>
+              </l-media>
+            </app-block>
+          </a>
+          <a routerLink="stage" routerLinkActive="active" class="clickable">
+            <app-block>
+              <l-media>
+                <l-media-action>
+                  <app-block>
+                    <i class="fa fa-puzzle-piece"></i>
+                  </app-block>
+                </l-media-action>
+                <l-media-details>
+                  <app-block>
+                    Stage
+                  </app-block>
+                </l-media-details>
+                <l-media-action>
+                  <app-block>
+                    <i class="fa fa-angle-right"></i>
+                  </app-block>
+                </l-media-action>
+              </l-media>
+            </app-block>
+          </a>
+          <a routerLink="viewport" routerLinkActive="active" class="clickable">
+            <app-block>
+              <l-media>
+                <l-media-action>
+                  <app-block>
+                    <i class="fa fa-puzzle-piece"></i>
+                  </app-block>
+                </l-media-action>
+                <l-media-details>
+                  <app-block>
+                    Viewport
+                  </app-block>
+                </l-media-details>
+                <l-media-action>
+                  <app-block>
+                    <i class="fa fa-angle-right"></i>
+                  </app-block>
+                </l-media-action>
+              </l-media>
+            </app-block>
+          </a>
+        </nav>
+      </l-viewport>
+    </aside>
+  </l-stack-block>
+  <l-stack-body>
+    <l-viewport>
+      <router-outlet></router-outlet>
+    </l-viewport>
+  </l-stack-body>
+</l-stack>
