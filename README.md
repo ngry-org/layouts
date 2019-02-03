@@ -2,6 +2,21 @@
 
 Project provides Angular layout components such as stack, layers, viewport, media, stage and panel.
 
+## Install
+
+NPM:
+
+```
+npm i @ngry/layouts
+```
+
+Yarn:
+
+```
+yarn add @ngry/layouts
+```
+
+
 ## Layers layout
 
 Represents ordered set of overlays.
