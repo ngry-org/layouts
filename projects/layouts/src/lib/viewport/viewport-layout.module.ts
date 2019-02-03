@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ViewportComponent } from './viewport/viewport.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {ViewportComponent} from './viewport/viewport.component';
 
 @NgModule({
   declarations: [ViewportComponent],
@@ -9,4 +9,5 @@ import { ViewportComponent } from './viewport/viewport.component';
     CommonModule
   ]
 })
-export class ViewportLayoutModule { }
+export class ViewportLayoutModule {
+}

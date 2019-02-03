@@ -13,7 +13,7 @@ l-tile app-block {
 
 l-tile > app-block > app-block {
   width: 300px;
-  background: #eee;
+  box-shadow: rgba(0,0,0,0.3) 0 1px 2px;
   border-radius: 3px;
 }
 
