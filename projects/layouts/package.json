@@ -1,6 +1,6 @@
 {
   "name": "@ngry/layouts",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Provides Angular layout components such as stack, layers, viewport, media, stage and panel.",
   "keywords": ["angular", "layout", "flex", "stack", "media", "layers", "viewport", "stage", "panel"],
   "repository": {
