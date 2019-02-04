@@ -2,10 +2,10 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-stack-mock',
-  templateUrl: './stack-mock.component.html',
-  styleUrls: ['./stack-mock.component.css']
+  templateUrl: './stack-mock-1.component.html',
+  styleUrls: ['./stack-mock-1.component.css']
 })
-export class StackMockComponent {
+export class StackMock1Component {
   direction = 'column';
 
   public setDirection(direction: string) {

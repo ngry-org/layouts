@@ -18,15 +18,6 @@ body {
   font: 13px Roboto, sans-serif;
 }
 
-section,
-header {
-  border-bottom: #ddd solid 1px;
-}
-
-header {
-  text-transform: uppercase;
-}
-
 nav a,
 header a {
   display: block;
@@ -36,7 +27,7 @@ aside {
   display: flex;
   flex-grow: 1;
   border-right: #ddd solid 1px;
-  width: 320px;
+  width: 280px;
 }
 
 input,
@@ -87,8 +78,8 @@ img {
 h1 {
   font-size: 13px;
   text-transform: uppercase;
-  font-weight: 900;
-  color: #888;
+  font-weight: 600;
+  color: #999;
 }
 
 ul {
@@ -113,6 +104,7 @@ hr {
 a.clickable {
   color: inherit;
   text-decoration: none;
+  display: block;
 }
 
 a.clickable.active {

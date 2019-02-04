@@ -2,56 +2,37 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
-import {
-  LayersLayoutModule,
-  MediaLayoutModule,
-  PanelLayoutModule,
-  StackLayoutModule,
-  StageLayoutModule,
-  ViewportLayoutModule
-} from '@ngry/layouts';
 
-import {AppComponent} from './app.component';
-import {BlockComponent} from './components/block/block.component';
-import {MediaMockComponent} from './mocks/media-mock/media-mock.component';
-import {LayoutsZoneComponent} from './zones/layouts-zone/layouts-zone.component';
-import {TextLineComponent} from './components/text-line/text-line.component';
-import {PanelMockComponent} from './mocks/panel-mock/panel-mock.component';
-import {ViewportMockComponent} from './mocks/viewport-mock/viewport-mock.component';
-import {StageMockComponent} from './mocks/stage-mock/stage-mock.component';
-import {StackMockComponent} from './mocks/stack-mock/stack-mock.component';
-import {LayersMockComponent} from './mocks/layers-mock/layers-mock.component';
-import {AboutZoneComponent} from './zones/about-zone/about-zone.component';
+import {LayoutsModule} from '@ngry/layouts';
+
 import {ServicesModule} from './services/services.module';
-import {RouteTitleService} from './services/route-title/route-title.service';
-import {TilesMockComponent} from './mocks/tiles-mock/tiles-mock.component';
-import {TilesLayoutModule} from '../../../layouts/src/lib/tiles/tiles-layout.module';
+import {ComponentsModule} from './components/components.module';
+import {BlocksModule} from './blocks/blocks.module';
+import {MocksModule} from './mocks/mocks.module';
+import {ZonesModule} from './zones/zones.module';
+
+import {MediaMock1Component} from './mocks/media-mock-1/media-mock-1.component';
+import {PanelMock1Component} from './mocks/panel-mock-1/panel-mock-1.component';
+import {ViewportMock1Component} from './mocks/viewport-mock-1/viewport-mock-1.component';
+import {StageMock1Component} from './mocks/stage-mock-1/stage-mock-1.component';
+import {StackMock1Component} from './mocks/stack-mock-1/stack-mock-1.component';
+import {LayersMock1Component} from './mocks/layers-mock-1/layers-mock-1.component';
+import {TilesMock1Component} from './mocks/tiles-mock-1/tiles-mock-1.component';
+import {LayoutsZoneComponent} from './zones/layouts-zone/layouts-zone.component';
+import {AppComponent} from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    BlockComponent,
-    MediaMockComponent,
-    LayoutsZoneComponent,
-    TextLineComponent,
-    PanelMockComponent,
-    ViewportMockComponent,
-    StageMockComponent,
-    StackMockComponent,
-    LayersMockComponent,
-    AboutZoneComponent,
-    TilesMockComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    LayersLayoutModule,
-    MediaLayoutModule,
-    PanelLayoutModule,
-    StackLayoutModule,
-    StageLayoutModule,
-    TilesLayoutModule,
-    ViewportLayoutModule,
+    LayoutsModule,
+    ComponentsModule,
+    BlocksModule,
+    MocksModule,
+    ZonesModule,
     ServicesModule,
     RouterModule.forRoot([
       {
@@ -66,71 +47,68 @@ import {TilesLayoutModule} from '../../../layouts/src/lib/tiles/tiles-layout.mod
           {
             path: '',
             pathMatch: 'full',
-            redirectTo: 'layers'
+            redirectTo: 'layers/1'
           },
           {
             path: 'layers',
-            component: LayersMockComponent,
+            pathMatch: 'full',
+            redirectTo: 'layers/1'
+          },
+          {
+            path: 'layers/1',
+            component: LayersMock1Component,
             data: {
               title: 'Layers layout'
             }
           },
           {
             path: 'media',
-            component: MediaMockComponent,
+            component: MediaMock1Component,
             data: {
               title: 'Media layout'
             }
           },
           {
             path: 'panel',
-            component: PanelMockComponent,
+            component: PanelMock1Component,
             data: {
               title: 'Panel layout'
             }
           },
           {
             path: 'stack',
-            component: StackMockComponent,
+            component: StackMock1Component,
             data: {
               title: 'Stack layout'
             }
           },
           {
             path: 'stage',
-            component: StageMockComponent,
+            component: StageMock1Component,
             data: {
               title: 'Stage layout'
             }
           },
           {
             path: 'tiles',
-            component: TilesMockComponent,
+            component: TilesMock1Component,
             data: {
               title: 'Tiles layout'
             }
           },
           {
             path: 'viewport',
-            component: ViewportMockComponent,
+            component: ViewportMock1Component,
             data: {
               title: 'Viewport layout'
             }
           }
         ]
-      },
-      {
-        path: 'about',
-        component: AboutZoneComponent,
-        data: {
-          title: 'About'
-        }
       }
     ], {
       useHash: true
     })
   ],
-  providers: [RouteTitleService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
