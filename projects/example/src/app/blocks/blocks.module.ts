@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {LayoutsModule} from '@ngry/layouts';
+import {StackLayoutModule, PanelLayoutModule, MediaLayoutModule} from '@ngry/layouts';
 import {HeaderComponent} from './header/header.component';
 import {ComponentsModule} from '../components/components.module';
 
@@ -13,7 +13,9 @@ import {ComponentsModule} from '../components/components.module';
   ],
   imports: [
     CommonModule,
-    LayoutsModule,
+    StackLayoutModule,
+    PanelLayoutModule,
+    MediaLayoutModule,
     ComponentsModule
   ]
 })

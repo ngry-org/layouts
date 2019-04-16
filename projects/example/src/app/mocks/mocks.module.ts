@@ -1,6 +1,14 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {LayoutsModule} from '@ngry/layouts';
+import {
+  LayersLayoutModule,
+  MediaLayoutModule,
+  PanelLayoutModule,
+  StackLayoutModule,
+  StageLayoutModule,
+  TilesLayoutModule,
+  ViewportLayoutModule
+} from '@ngry/layouts';
 
 import {LayersMock1Component} from './layers-mock-1/layers-mock-1.component';
 import {MediaMock1Component} from './media-mock-1/media-mock-1.component';
@@ -24,7 +32,13 @@ import {ComponentsModule} from '../components/components.module';
   ],
   imports: [
     CommonModule,
-    LayoutsModule,
+    MediaLayoutModule,
+    PanelLayoutModule,
+    StackLayoutModule,
+    LayersLayoutModule,
+    TilesLayoutModule,
+    ViewportLayoutModule,
+    StageLayoutModule,
     BlocksModule,
     ComponentsModule
   ]

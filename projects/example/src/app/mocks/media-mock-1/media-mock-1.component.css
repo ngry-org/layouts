@@ -3,3 +3,7 @@
   flex-grow: 1;
   min-height: 100%;
 }
+
+l-media-action {
+  min-width: 30px;
+}

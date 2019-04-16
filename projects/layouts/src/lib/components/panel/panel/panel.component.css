@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+:host[x=left] {
+  align-items: flex-start;
+}
+
+:host[x=center] {
+  align-items: center;
+}
+
+:host[x=right] {
+  align-items: flex-end;
+}
+
+:host[y=top] {
+  justify-content: flex-start;
+}
+
+:host[y=center] {
+  justify-content: center;
+}
+
+:host[y=bottom] {
+  justify-content: flex-end;
+}

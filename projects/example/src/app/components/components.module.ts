@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {LayoutsModule} from '@ngry/layouts';
 import {BlockComponent} from './block/block.component';
 import {TextLineComponent} from './text-line/text-line.component';
 
@@ -14,8 +13,7 @@ import {TextLineComponent} from './text-line/text-line.component';
     TextLineComponent
   ],
   imports: [
-    CommonModule,
-    LayoutsModule
+    CommonModule
   ]
 })
 export class ComponentsModule {
